@@ -137,6 +137,10 @@ app.get('/api/favorite-places', (req, res) => {
   res.json(favoritePlaces);
 });
 
+app.get('/roll-dice', (req, res) => {
+  const result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
+  res.json({ result });
+});
 
 
 // Custom 404 page.
